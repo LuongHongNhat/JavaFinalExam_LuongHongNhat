@@ -23,16 +23,16 @@ public class App
 
         List<SinhVien> lstSinhVien = CSVRead.read("C:\\Users\\nhatlh2\\Desktop\\data.csv");
 
-//        for (int i = 0; i < lstSinhVien.size(); i++) {
-//            System.out.println("Thông tin SV thứ " + (i +1) +"\n "+ lstSinhVien.get(i).toString());
-//        }
+        for (int i = 0; i < lstSinhVien.size(); i++) {
+            System.out.println("Thông tin SV thứ " + (i +1) +"\n "+ lstSinhVien.get(i).toString());
+        }
 
         //Câu 1.2: Liệt kê danh sách 10 sinh viên có điểm thi lý thuyết cao nhất
-//        Collections.sort(lstSinhVien);
-//        Collections.reverse(lstSinhVien);
-//        for (int i = 0; i < 10; i++) {
-//            System.out.println("Thông tin SV thứ " + (i +1) +"\n "+ lstSinhVien.get(i).toString());
-//        }
+        Collections.sort(lstSinhVien);
+        Collections.reverse(lstSinhVien);
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Thông tin SV thứ " + (i +1) +"\n "+ lstSinhVien.get(i).toString());
+        }
 
         //Câu 1.3: Tính điểm tổng kết cho từng sinh viên
         ArrayList<Diem> lstDiem = new ArrayList<>();
@@ -57,11 +57,11 @@ public class App
             }
         });
 
-//        for (int i = 0; i < 10; i++) {
-//            System.out.println("Thông tin SV thứ " + (i +1) +"\n "+ lstDiem.get(i).tongDiem);
-//        }
-
-//        CSVWrite.write(lstDiem);
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Thông tin SV thứ " + (i +1) +"\n "+ lstDiem.get(i).tongDiem);
+        }
+        //Câu 1.5: Xuat danh sach diem ra file csv
+        CSVWrite.write(lstDiem);
 
         // Cau 2.1
         //^[\w-\._\+%]+@(outlook.com|gmail.com)\./
@@ -80,9 +80,9 @@ public class App
             }
         }
 
-//        for (SinhVien sv : lstSinhVienGmail) {
-//            System.out.println("Thông tin SV thứ " + sv.getEmail());
-//        }
+        for (SinhVien sv : lstSinhVienGmail) {
+            System.out.println("Thông tin SV thứ " + sv.getEmail());
+        }
         //Cau 2.3
 
         CSVWrite.WriteObjectToFile(lstSinhVienOutlook,"outlook.bin");
@@ -92,5 +92,6 @@ public class App
             System.out.println("Thông tin SV thứ " + sv.getEmail());
         }
     }
+        //Cau3: Unit test: thu muc test
 
 }
